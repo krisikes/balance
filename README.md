@@ -1,4 +1,4 @@
-Balance is a browser extension that detects adult website to safeguard children in the internet 
+Balance is a browser extension that detects adult website to safeguard children on the internet 
 
 
 ### Project Structure
