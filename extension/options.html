@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balance Settings</title>
+    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="icons/icon48.png" alt="Balance Logo" class="logo">
+                <h1>Balance</h1>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item active" data-section="general">
+                    <i class="fas fa-cog"></i>
+                    <span>General</span>
+                </li>
+                <li class="nav-item" data-section="filtering">
+                    <i class="fas fa-filter"></i>
+                    <span>Filtering</span>
+                </li>
+                <li class="nav-item" data-section="whitelist">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Whitelist</span>
+                </li>
+                <li class="nav-item" data-section="blacklist">
+                    <i class="fas fa-ban"></i>
+                    <span>Blacklist</span>
+                </li>
+                <li class="nav-item" data-section="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifications</span>
+                </li>
+                <li class="nav-item" data-section="about">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- General Settings Section -->
+            <section id="general" class="content-section active">
+                <h2>General Settings</h2>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Enable Balance</h3>
+                            <p>Turn content filtering on or off</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="enableExtension" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Filter Sensitivity</h3>
+                            <p>Adjust how strict the content filtering should be</p>
+                        </div>
+                        <div class="range-slider">
+                            <input type="range" id="sensitivity" min="1" max="5" value="3">
+                            <div class="range-labels">
+                                <span>Low</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filtering Settings Section -->
+            <section id="filtering" class="content-section">
+                <h2>Filtering Settings</h2>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>URL Filtering</h3>
+                            <p>Enable or disable URL-based filtering</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="urlFiltering" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Content Filtering</h3>
+                            <p>Enable or disable text content analysis</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="contentFiltering" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Image Filtering</h3>
+                            <p>Enable or disable image content analysis</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="imageFiltering">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Whitelist Section -->
+            <section id="whitelist" class="content-section">
+                <h2>Whitelist</h2>
+                <div class="list-container">
+                    <div class="list-header">
+                        <input type="text" id="whitelistInput" placeholder="Add URL to whitelist...">
+                        <button class="add-button">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <ul id="whitelistItems" class="list-items">
+                        <!-- Items will be added dynamically -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Blacklist Section -->
+            <section id="blacklist" class="content-section">
+                <h2>Blacklist</h2>
+                <div class="list-container">
+                    <div class="list-header">
+                        <input type="text" id="blacklistInput" placeholder="Add URL to blacklist...">
+                        <button class="add-button">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <ul id="blacklistItems" class="list-items">
+                        <!-- Items will be added dynamically -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section id="notifications" class="content-section">
+                <h2>Notification Settings</h2>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Block Notifications</h3>
+                            <p>Show notifications when content is blocked</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="blockNotifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>Statistics Updates</h3>
+                            <p>Show notifications for daily statistics</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="statsNotifications">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                <h2>About Balance</h2>
+                <div class="about-container">
+                    <div class="version-info">
+                        <h3>Version</h3>
+                        <p>1.0.0</p>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="link-button">
+                            <i class="fas fa-book"></i>
+                            Documentation
+                        </a>
+                        <a href="#" class="link-button">
+                            <i class="fas fa-bug"></i>
+                            Report Issue
+                        </a>
+                        <a href="#" class="link-button">
+                            <i class="fas fa-star"></i>
+                            Rate Extension
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

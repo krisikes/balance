@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balance</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="icons/icon48.png" alt="Balance Logo" class="logo">
+            <h1>Balance</h1>
+        </div>
+        
+        <div class="status-section">
+            <div class="status-indicator">
+                <span class="status-dot active"></span>
+                <span class="status-text">Active</span>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-label">Pages Checked</span>
+                <span class="stat-value" id="pagesChecked">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Content Blocked</span>
+                <span class="stat-value" id="contentBlocked">0</span>
+            </div>
+        </div>
+
+        <div class="actions-section">
+            <button id="toggleExtension" class="action-button">
+                <span class="button-text">Disable</span>
+            </button>
+            <button id="openOptions" class="action-button secondary">
+                Settings
+            </button>
+        </div>
+
+        <div class="footer">
+            <a href="#" id="reportIssue">Report an Issue</a>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
